@@ -21,3 +21,21 @@ By default, server runs on 0.0.0.0:8080, but is configurable with command line a
 ```
 uv run weather.py --host <your host> --port <your port>
 ```
+
+### Docker
+
+A Dockerfile is provided for easy containerization of the server.
+
+Build the image:
+
+```
+docker build -t weather-mcp-server .
+```
+
+Run the container:
+
+```
+docker run -p 8080:8080 weather-mcp-server
+```
+
+The server will be accessible at `http://localhost:8080` (or the appropriate host if not running locally).
